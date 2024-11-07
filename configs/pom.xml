@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.betonquest.parent</groupId>
+    <artifactId>versions</artifactId>
+    <version>${revision}${changelist}</version>
+    <relativePath>../versions/pom.xml</relativePath>
+  </parent>
+
+  <artifactId>configs</artifactId>
+  <name>Configs</name>
+  <description>Global configurations for java tooling</description>
+
+  <properties>
+    <!-- project version -->
+    <revision>1786NEW_VERSION</revision>
+    <changelist>-SNAPSHOT</changelist>
+  </properties>
+
+  <build>
+    <resources>
+      <resource>
+        <directory>.</directory>
+        <includes>
+          <include>checkstyle.xml</include>
+          <include>pmd-ruleset.xml</include>
+          <include>spotbugs-exclude.xml</include>
+        </includes>
+        <targetPath>config</targetPath>
+      </resource>
+    </resources>
+  </build>
+</project>
