@@ -15,8 +15,8 @@ A basic setup for all maven projects containing building and tools for java.
 
         <repositories>
             <repository>
-                <id>reload-repo</id>
-                <url>https://nexus.reloadkube.managedservices.resilient-teched.com/repository/reload/</url>
+                <id>betonquest-repo</id>
+                <url>https://nexus.betonquest.org/repository/betonquest/</url>
             </repository>
         </repositories> 
     </project>
@@ -32,18 +32,22 @@ It is strongly recommended to use the wrapper in any automated build process, as
 
 ## Update versions
 
-update-dependencies
+To update the versions of all dependencies that are on a release version, use the following commands:
 ```shell
 ./mvnw --projects :parent,:versions clean -DgenerateBackupPoms=false versions:update-properties
 ```
-update-snapshot-dependencies
+To update the versions of all dependencies that are on a snapshot version, use the following commands:
 ```shell
 ./mvnw --projects :parent,:versions -DgenerateBackupPoms=false versions:unlock-snapshots versions:lock-snapshots
 ```
-bump-version
+
+## Bump version
+
+To bump the version of the project, use the following commands to interactively set the new version:
 ```shell
-$(eval SHELL := /bin/bash)
-@if [ -z "$(NEW_VERSION)" ]; then read -e -i "$$(./mvnw help:evaluate -Dexpression=revision --quiet -DforceStdout)" -p 'new version: ' -r NEW_VERSION; fi; \
-  if [ -z "$$NEW_VERSION" ]; then echo 'ERROR: NEW_VERSION is not set.'; exit 2; fi; \
-  ./mvnw versions:set-property -DgenerateBackupPoms=false -Dproperty=revision -DnewVersion=$$NEW_VERSION
+read -e -i "$(./mvnw help:evaluate -Dexpression=revision --quiet -DforceStdout)" -p 'new version: ' -r NEW_VERSION
+```
+Then set the new version:
+```shell
+if [ -n "$$NEW_VERSION" ]; then ./mvnw versions:set-property -DgenerateBackupPoms=false -Dproperty=revision -DnewVersion=$NEW_VERSION; fi
 ```
