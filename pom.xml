@@ -33,7 +33,7 @@
     <maven-enforcer-plugin.required-maven-version.version>3.9.6</maven-enforcer-plugin.required-maven-version.version>
     <maven-failsafe-plugin.version>3.4.0</maven-failsafe-plugin.version>
     <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
-    <maven-javadoc-plugin.version>3.7.0</maven-javadoc-plugin.version>
+    <maven-javadoc-plugin.version>3.11.1</maven-javadoc-plugin.version>
     <maven-shade-plugin.version>3.6.0</maven-shade-plugin.version>
     <editorconfig-maven-plugin.version>0.1.3</editorconfig-maven-plugin.version> <!-- XXX: Remove linter dependency overrides when upgrading from 0.1.3 -->
     <maven-checkstyle-plugin.version>3.4.0</maven-checkstyle-plugin.version>
