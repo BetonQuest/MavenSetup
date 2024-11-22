@@ -43,7 +43,7 @@
     <maven-pmd-plugin.pmd-java.version>7.5.0</maven-pmd-plugin.pmd-java.version>
     <spotbugs-maven-plugin.version>4.8.6.2</spotbugs-maven-plugin.version>
     <maven-surefire-report-plugin.version>3.5.0</maven-surefire-report-plugin.version>
-    <maven-project-info-reports-plugin.version>3.7.0</maven-project-info-reports-plugin.version>
+    <maven-project-info-reports-plugin.version>3.8.0</maven-project-info-reports-plugin.version>
     <maven-jxr-plugin.version>3.4.0</maven-jxr-plugin.version>
     <cobertura-maven-plugin.version>2.7</cobertura-maven-plugin.version>
     <pitest-maven.version>1.16.3</pitest-maven.version>
