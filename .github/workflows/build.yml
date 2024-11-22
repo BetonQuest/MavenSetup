@@ -23,8 +23,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          submodules: true
       - name: Determine Java version
         uses: BetonQuest/java-version-export-github-action@main
         id: determine-java-version
@@ -38,7 +36,7 @@ jobs:
           cache: maven
       - name: Build with Maven verify
         run: |
-          ./mvnw --batch-mode verify javadoc:javadoc javadoc:aggregate
+          ./mvnw --batch-mode verify
   build_main_branch:
     name: Build main branch
     runs-on: ubuntu-latest
@@ -50,7 +48,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          submodules: true
       - name: Determine Java version
         uses: BetonQuest/java-version-export-github-action@main
         id: determine-java-version
@@ -80,25 +77,13 @@ jobs:
             DEPLOY_RELEASE=true
             echo "DEPLOY_RELEASE=$DEPLOY_RELEASE" >> $GITHUB_ENV
           fi
-
-      - name: Build merged feature without releasing it
-        if: env.DEPLOY_RELEASE  != 'true'
-        run: |
-          ./mvnw -Dchangelist= --batch-mode verify -DstagingDirectory="${GITHUB_WORKSPACE}/target/latest" site:site site:stage
-      - name: Build new release
-        if: env.DEPLOY_RELEASE  == 'true'
-        run: |
-          ./mvnw -Dchangelist= --batch-mode verify -DstagingDirectory="${GITHUB_WORKSPACE}/target/latest" site:site site:stage
-          test -d "${GITHUB_WORKSPACE}/target/latest"
-          rm -rf -- "${GITHUB_WORKSPACE}/target/${MAVEN_POM_REVISION_VERSION}" || :
-          cp --recursive --verbose -- "${GITHUB_WORKSPACE}/target/latest" "${GITHUB_WORKSPACE}/target/${MAVEN_POM_REVISION_VERSION}"
-      - name: Deploy new release
+      - name: Build with Maven deploy
         if: env.DEPLOY_RELEASE  == 'true'
         env:
           MAVEN_SERVER_USERNAME: ${{ secrets.MAVEN_SERVER_USERNAME }}
           MAVEN_SERVER_PASSWORD: ${{ secrets.MAVEN_SERVER_PASSWORD }}
         run: |
-          ./mvnw --batch-mode deploy -Dchangelist= -DskipTests=true -Dcheckstyle.skip=true -Dpmd.skip=true -Dspotbugs.skip=true
+          ./mvnw --batch-mode deploy -Dchangelist= -P Skip-Test-None,Verification
       - name: Create new git tag
         if: env.DEPLOY_RELEASE  == 'true'
         uses: rickstaa/action-create-tag@v1
