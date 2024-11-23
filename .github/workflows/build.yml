@@ -88,7 +88,7 @@ jobs:
         if: env.DEPLOY_RELEASE  == 'true'
         uses: rickstaa/action-create-tag@v1
         with:
-          tag: ${{ env.MAVEN_POM_REVISION_VERSION }}
+          tag: v${{ env.MAVEN_POM_REVISION_VERSION }}
           message: Release ${{ env.MAVEN_POM_REVISION_VERSION }}
       - name: Set version output
         id: set-version
