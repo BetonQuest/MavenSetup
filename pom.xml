@@ -20,6 +20,8 @@
     <!-- project version -->
     <revision>1.0.0</revision>
     <changelist>-SNAPSHOT</changelist>
+    <!-- project properties -->
+    <skipShaded>false</skipShaded>
     <!-- dependencyManagement versions -->
     <jetbrains-annotations.version>26.0.1</jetbrains-annotations.version>
     <spotbugs-annotations.version>4.8.6</spotbugs-annotations.version>
@@ -511,6 +513,7 @@
               <createDependencyReducedPom>false</createDependencyReducedPom>
               <shadedArtifactAttached>true</shadedArtifactAttached>
               <minimizeJar>true</minimizeJar>
+              <skip>${skipShaded}</skip>
               <artifactSet>
                 <excludes>
                   <exclude>com.github.spotbugs:spotbugs-annotations</exclude>
