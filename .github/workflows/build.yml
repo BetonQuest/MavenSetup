@@ -70,7 +70,7 @@ jobs:
       - name: Check if revision is already tagged
         shell: bash
         run: |
-          if git tag -l $MAVEN_POM_REVISION_VERSION | grep -q $MAVEN_POM_REVISION_VERSION; then
+          if git tag -l v${MAVEN_POM_REVISION_VERSION} | grep -q v$MAVEN_POM_REVISION_VERSION; then
             echo "Revision $MAVEN_POM_REVISION_VERSION is already tagged. Skipping deployment."
             exit 0
           else
