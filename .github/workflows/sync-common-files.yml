@@ -14,4 +14,5 @@ jobs:
       - name: Sync Common Files
         uses: BetonQuest/CommonProjectFiles@main
         with:
+          ignored-files: docs
           token: ${{ secrets.ALL_REPOSITORIES_ACCESS_TOKEN }}
