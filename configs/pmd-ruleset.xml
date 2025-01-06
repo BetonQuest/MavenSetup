@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
-<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         name="Custom Rules"
+<ruleset name="Custom Rules" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
          xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
 
@@ -72,8 +72,7 @@
 
   <rule ref="category/java/codestyle.xml/AtLeastOneConstructor">
     <properties>
-      <property name="violationSuppressXPath"
-                value="//ancestor::ClassDeclaration[matches(@SimpleName, '^.*(Test|Fixture)$')]"/>
+      <property name="violationSuppressXPath" value="//ancestor::ClassDeclaration[matches(@SimpleName, '^.*(IT|Test|Fixture)$')]"/>
     </properties>
   </rule>
   <rule ref="category/java/codestyle.xml/AvoidDollarSigns"/>
@@ -126,7 +125,7 @@
   <rule ref="category/java/codestyle.xml/LambdaCanBeMethodReference"/>
   <rule ref="category/java/codestyle.xml/LinguisticNaming">
     <properties>
-      <property name="violationSuppressXPath" value="//ancestor::ClassDeclaration[matches(@SimpleName, '^.*Test$')]"/>
+      <property name="violationSuppressXPath" value="//ancestor::ClassDeclaration[matches(@SimpleName, '^.*(IT|Test|Fixture)$')]"/>
     </properties>
   </rule>
   <rule ref="category/java/codestyle.xml/LocalHomeNamingConvention"/>
@@ -152,8 +151,7 @@
   <rule ref="category/java/codestyle.xml/ShortVariable"/>
   <rule ref="category/java/codestyle.xml/TooManyStaticImports">
     <properties>
-      <property name="violationSuppressXPath"
-                value="//ancestor::ClassDeclaration[matches(@SimpleName, '^.*(Test|Fixture)$')]"/>
+      <property name="violationSuppressXPath" value="//ancestor::ClassDeclaration[matches(@SimpleName, '^.*(IT|Test|Fixture)$')]"/>
     </properties>
   </rule>
   <rule ref="category/java/codestyle.xml/UnnecessaryAnnotationValueElement"/>
@@ -216,7 +214,7 @@
   <rule ref="category/java/design.xml/TooManyFields"/>
   <rule ref="category/java/design.xml/TooManyMethods">
     <properties>
-      <property name="violationSuppressXPath" value="//ancestor::ClassDeclaration[matches(@SimpleName, '^.*Test$')]"/>
+      <property name="violationSuppressXPath" value="//ancestor::ClassDeclaration[matches(@SimpleName, '^.*(IT|Test|Fixture)$')]"/>
     </properties>
   </rule>
   <rule ref="category/java/design.xml/UselessOverridingMethod"/>
@@ -226,8 +224,7 @@
   <rule ref="category/java/documentation.xml/CommentContent"/>
   <rule ref="category/java/documentation.xml/CommentRequired">
     <properties>
-      <property name="violationSuppressXPath"
-                value="//ancestor::ClassDeclaration[matches(@SimpleName, '^.*(Test|Fixture)$')]"/>
+      <property name="violationSuppressXPath" value="//ancestor::ClassDeclaration[matches(@SimpleName, '^.*(IT|Test|Fixture)$')]"/>
     </properties>
   </rule>
   <rule ref="category/java/documentation.xml/CommentSize">
@@ -250,7 +247,8 @@
   <rule ref="category/java/errorprone.xml/AvoidDecimalLiteralsInBigDecimalConstructor"/>
   <rule ref="category/java/errorprone.xml/AvoidDuplicateLiterals">
     <properties>
-      <property name="violationSuppressXPath" value="//ancestor::ClassDeclaration[matches(@SimpleName, '^.*Test$')]"/>
+      <property name="skipAnnotations" value="true" />
+      <property name="violationSuppressXPath" value="//ancestor::ClassDeclaration[matches(@SimpleName, '^.*(IT|Test|Fixture)$')]"/>
     </properties>
   </rule>
   <rule ref="category/java/errorprone.xml/AvoidEnumAsIdentifier"/>
