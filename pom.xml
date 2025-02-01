@@ -23,7 +23,7 @@
     <!-- project properties -->
     <skipShade>false</skipShade>
     <!-- dependencyManagement versions -->
-    <jetbrains-annotations.version>26.0.1</jetbrains-annotations.version>
+    <jetbrains-annotations.version>26.0.2</jetbrains-annotations.version>
     <spotbugs-annotations.version>4.8.6</spotbugs-annotations.version>
     <junit.version>5.11.4</junit.version>
     <mockito.version>5.15.2</mockito.version>
