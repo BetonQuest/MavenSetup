@@ -20,6 +20,8 @@
     <!-- project version -->
     <revision>1.5.0</revision>
     <changelist>-SNAPSHOT</changelist>
+    <!-- project properties -->
+    <skipShade>false</skipShade>
     <!-- project test groups -->
     <includedSurefireGroups>none() | any()</includedSurefireGroups>
     <includedFailsafeGroups>none() | any()</includedFailsafeGroups>
@@ -502,6 +504,7 @@
               <createDependencyReducedPom>false</createDependencyReducedPom>
               <shadedArtifactAttached>true</shadedArtifactAttached>
               <minimizeJar>true</minimizeJar>
+              <skip>${skipShade}</skip>
               <artifactSet>
                 <excludes>
                   <exclude>com.github.spotbugs:spotbugs-annotations</exclude>
