@@ -18,10 +18,15 @@
 
   <properties>
     <!-- project version -->
-    <revision>1.4.0</revision>
+    <revision>1.5.0</revision>
     <changelist>-SNAPSHOT</changelist>
-    <!-- project properties -->
-    <skipShade>false</skipShade>
+    <!-- project test groups -->
+    <includedSurefireGroups>none() | any()</includedSurefireGroups>
+    <includedFailsafeGroups>none() | any()</includedFailsafeGroups>
+    <excludedSurefireGroups/>
+    <excludedFailsafeGroups/>
+    <excludedSurefireGroups.default>${excludedSurefireGroups}</excludedSurefireGroups.default>
+    <excludedFailsafeGroups.default>${excludedFailsafeGroups}</excludedFailsafeGroups.default>
     <!-- dependencyManagement versions -->
     <jetbrains-annotations.version>26.0.2</jetbrains-annotations.version>
     <spotbugs-annotations.version>4.9.0</spotbugs-annotations.version>
@@ -49,7 +54,7 @@
     <maven-jxr-plugin.version>3.6.0</maven-jxr-plugin.version>
     <cobertura-maven-plugin.version>2.7</cobertura-maven-plugin.version>
     <pitest-maven.version>1.17.4</pitest-maven.version>
-    <pitest-junit5-plugin.version>1.2.1</pitest-junit5-plugin.version>
+    <pitest-junit5-plugin.version>1.2.2</pitest-junit5-plugin.version>
     <versions-maven-plugin.version>2.18.0</versions-maven-plugin.version>
   </properties>
 
@@ -372,6 +377,32 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <configuration>
           <parallel>all</parallel>
+          <includes>
+            <include>**/*Test.java</include>
+          </includes>
+          <groups>${includedSurefireGroups}</groups>
+          <excludedGroups>${excludedSurefireGroups.default}</excludedGroups>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>>integration-test</id>
+            <goals>
+              <goal>integration-test</goal>
+              <goal>verify</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <parallel>all</parallel>
+          <includes>
+            <include>**/*IT.java</include>
+          </includes>
+          <groups>${includedFailsafeGroups}</groups>
+          <excludedGroups>${excludedFailsafeGroups.default}</excludedGroups>
         </configuration>
       </plugin>
       <plugin>
@@ -424,25 +455,6 @@
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-failsafe-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>>integration-test</id>
-            <goals>
-              <goal>integration-test</goal>
-              <goal>verify</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <parallel>all</parallel>
-          <includes>
-            <include>**/*IT.java</include>
-          </includes>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
         <executions>
           <execution>
@@ -490,7 +502,6 @@
               <createDependencyReducedPom>false</createDependencyReducedPom>
               <shadedArtifactAttached>true</shadedArtifactAttached>
               <minimizeJar>true</minimizeJar>
-              <skip>${skipShade}</skip>
               <artifactSet>
                 <excludes>
                   <exclude>com.github.spotbugs:spotbugs-annotations</exclude>
@@ -673,6 +684,27 @@
     </plugins>
   </reporting>
   <profiles>
+    <!--
+			includedSurefireGroups runs unit tests (selected via tags) exclusively; tags excluded by default need to be explicitly un-excluded.
+			excludedSurefireGroups ignores unit tests.
+			includedFailsafeGroups runs integration tests (selected via tags) exclusively; tags excluded by default need to be explicitly un-excluded.
+			excludedFailsafeGroups ignores integration tests.
+			Each can be (comma-separated) lists of tags (defined via @Tag("TAG-NAME")) or tag expressions (NAME1 & NAME2, NAME1 | NAME2).
+			Note: To run all available tests, the shorter -DallTests=true can be used.
+		-->
+    <profile>
+      <id>Test-All</id>
+      <activation>
+        <property>
+          <name>allTests</name>
+          <value>true</value>
+        </property>
+      </activation>
+      <properties>
+        <excludedSurefireGroups.default/>
+        <excludedFailsafeGroups.default/>
+      </properties>
+    </profile>
     <profile>
       <id>Test-None</id>
       <build>
@@ -680,6 +712,13 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
+            <configuration>
+              <skipTests>true</skipTests>
+            </configuration>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-failsafe-plugin</artifactId>
             <configuration>
               <skipTests>true</skipTests>
             </configuration>
