@@ -18,7 +18,7 @@
 
   <properties>
     <!-- project version -->
-    <revision>1.6.0</revision>
+    <revision>1.6.1</revision>
     <changelist>-SNAPSHOT</changelist>
     <!-- project properties -->
     <skipShade>false</skipShade>
@@ -31,7 +31,7 @@
     <excludedFailsafeGroups.default>${excludedFailsafeGroups}</excludedFailsafeGroups.default>
     <!-- dependencyManagement versions -->
     <jetbrains-annotations.version>26.0.2</jetbrains-annotations.version>
-    <spotbugs-annotations.version>4.9.1</spotbugs-annotations.version>
+    <spotbugs-annotations.version>4.9.2</spotbugs-annotations.version>
     <junit.version>5.11.4</junit.version>
     <mockito.version>5.15.2</mockito.version>
     <maven-wrapper.version>3.3.2</maven-wrapper.version>

@@ -27,7 +27,7 @@
 
   <properties>
     <!-- project version -->
-    <revision>1.6.0</revision>
+    <revision>1.6.1</revision>
     <changelist>-SNAPSHOT</changelist>
     <!-- project settings -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
