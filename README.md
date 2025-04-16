@@ -45,7 +45,7 @@ To update the versions of all dependencies that are on a snapshot version, use t
 
 To bump the version of the project, use the following commands to interactively set the new version:
 ```shell
-read -e -i "$(./mvnw help:evaluate -Dexpression=revision --quiet -DforceStdout)" -p 'new version: ' -r NEW_VERSION
+read -e -i "$(./mvnw --raw-streams --non-recursive help:evaluate -Dexpression=revision --quiet -DforceStdout)" -p 'new version: ' -r NEW_VERSION
 ```
 Then set the new version:
 ```shell
