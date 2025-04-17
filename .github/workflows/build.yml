@@ -65,13 +65,19 @@ jobs:
       - name: Read revision version from pom.xml
         shell: bash
         run: |
-          MAVEN_POM_REVISION_VERSION="$(./mvnw --batch-mode help:evaluate -Dexpression=revision -q -DforceStdout)"
-          echo "MAVEN_POM_REVISION_VERSION=$MAVEN_POM_REVISION_VERSION" >> $GITHUB_ENV
+          if ./mvnw --version | grep -q 'Apache Maven Daemon'; then
+            # Using mvnd – need --raw-streams --non-recursive  for proper output, fix for https://github.com/apache/maven-mvnd/issues/1026
+            REVISION_VERSION="$(./mvnw --raw-streams --non-recursive help:evaluate -Dexpression=revision -DforceStdout -q)"
+          else
+            # Standard Maven or Maven Wrapper
+            REVISION_VERSION="$(./mvnw help:evaluate -Dexpression=revision -DforceStdout -q)"
+          fi
+          echo "REVISION_VERSION=$REVISION_VERSION" >> $GITHUB_ENV
       - name: Check if revision is already tagged
         shell: bash
         run: |
-          if git tag -l v${MAVEN_POM_REVISION_VERSION} | grep -q v$MAVEN_POM_REVISION_VERSION; then
-            echo "Revision $MAVEN_POM_REVISION_VERSION is already tagged. Skipping deployment."
+          if git tag -l v${REVISION_VERSION} | grep -q v$REVISION_VERSION; then
+            echo "Revision $REVISION_VERSION is already tagged. Skipping deployment."
             exit 0
           else
             DEPLOY_RELEASE=true
