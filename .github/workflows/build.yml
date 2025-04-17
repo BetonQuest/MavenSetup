@@ -65,13 +65,8 @@ jobs:
       - name: Read revision version from pom.xml
         shell: bash
         run: |
-          if ./mvnw --version | grep -q 'Apache Maven Daemon'; then
-            # Using mvnd – need --raw-streams --non-recursive  for proper output, fix for https://github.com/apache/maven-mvnd/issues/1026
-            REVISION_VERSION="$(./mvnw --raw-streams --non-recursive help:evaluate -Dexpression=revision -DforceStdout -q)"
-          else
-            # Standard Maven or Maven Wrapper
-            REVISION_VERSION="$(./mvnw help:evaluate -Dexpression=revision -DforceStdout -q)"
-          fi
+          # Using mvnd – need --raw-streams --non-recursive for proper output, fix for https://github.com/apache/maven-mvnd/issues/1026
+          REVISION_VERSION="$(./mvnw --raw-streams --non-recursive help:evaluate -Dexpression=revision -DforceStdout -q)"
           echo "REVISION_VERSION=$REVISION_VERSION" >> $GITHUB_ENV
       - name: Check if revision is already tagged
         shell: bash
