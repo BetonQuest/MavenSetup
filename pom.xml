@@ -18,7 +18,7 @@
 
   <properties>
     <!-- project version -->
-    <revision>1.7.1</revision>
+    <revision>1.7.2</revision>
     <changelist>-SNAPSHOT</changelist>
     <!-- project properties -->
     <skipShade>false</skipShade>
@@ -514,11 +514,19 @@
                 <filter>
                   <artifact>*</artifact>
                   <excludes>
-                    <exclude>META-INF/**</exclude>
-                    <exclude>javax/**</exclude>
+                    <exclude>META-INF/MANIFEST.MF</exclude>
+                    <exclude>META-INF/NOTICE.txt</exclude>
+                    <exclude>META-INF/NOTICE</exclude>
+                    <exclude>META-INF/LICENSE.txt</exclude>
+                    <exclude>META-INF/LICENSE</exclude>
+                    <exclude>META-INF/versions/**/module-info.class</exclude>
                   </excludes>
                 </filter>
               </filters>
+              <transformers>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer"/>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
+              </transformers>
             </configuration>
           </execution>
         </executions>
