@@ -18,7 +18,7 @@
 
   <properties>
     <!-- project version -->
-    <revision>1.7.2</revision>
+    <revision>1.8.0</revision>
     <changelist>-SNAPSHOT</changelist>
     <!-- project properties -->
     <skipShade>false</skipShade>
@@ -32,8 +32,8 @@
     <!-- dependencyManagement versions -->
     <jetbrains-annotations.version>26.0.2</jetbrains-annotations.version>
     <spotbugs-annotations.version>4.9.3</spotbugs-annotations.version>
-    <junit.version>5.12.1</junit.version>
-    <mockito.version>5.16.1</mockito.version>
+    <junit.version>5.13.0</junit.version>
+    <mockito.version>5.18.0</mockito.version>
     <maven-wrapper.version>3.3.2</maven-wrapper.version>
     <!-- pluginManagement -->
     <maven-compiler-plugin.error-prone-code.version>2.36.0</maven-compiler-plugin.error-prone-code.version>
@@ -46,17 +46,17 @@
     <maven-shade-plugin.version>3.6.0</maven-shade-plugin.version>
     <editorconfig-maven-plugin.version>0.1.3</editorconfig-maven-plugin.version> <!-- XXX: Remove linter dependency overrides when upgrading from 0.1.3 -->
     <maven-checkstyle-plugin.version>3.6.0</maven-checkstyle-plugin.version>
-    <maven-checkstyle-plugin.checkstyle.version>10.22.0</maven-checkstyle-plugin.checkstyle.version>
+    <maven-checkstyle-plugin.checkstyle.version>10.25.0</maven-checkstyle-plugin.checkstyle.version>
     <maven-pmd-plugin.version>3.26.0</maven-pmd-plugin.version>
-    <maven-pmd-plugin.pmd-core.version>7.12.0</maven-pmd-plugin.pmd-core.version>
-    <maven-pmd-plugin.pmd-java.version>7.12.0</maven-pmd-plugin.pmd-java.version>
+    <maven-pmd-plugin.pmd-core.version>7.14.0</maven-pmd-plugin.pmd-core.version>
+    <maven-pmd-plugin.pmd-java.version>7.14.0</maven-pmd-plugin.pmd-java.version>
     <spotbugs-maven-plugin.version>4.9.3.0</spotbugs-maven-plugin.version>
     <maven-surefire-report-plugin.version>3.5.3</maven-surefire-report-plugin.version>
     <maven-project-info-reports-plugin.version>3.9.0</maven-project-info-reports-plugin.version>
     <maven-jxr-plugin.version>3.6.0</maven-jxr-plugin.version>
     <cobertura-maven-plugin.version>2.7</cobertura-maven-plugin.version>
-    <pitest-maven.version>1.19.0</pitest-maven.version>
-    <pitest-junit5-plugin.version>1.2.2</pitest-junit5-plugin.version>
+    <pitest-maven.version>1.19.4</pitest-maven.version>
+    <pitest-junit5-plugin.version>1.2.3</pitest-junit5-plugin.version>
     <versions-maven-plugin.version>2.18.0</versions-maven-plugin.version>
   </properties>
 
