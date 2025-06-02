@@ -16,7 +16,7 @@
 
   <properties>
     <!-- project version -->
-    <revision>1.7.2</revision>
+    <revision>1.8.0</revision>
     <changelist>-SNAPSHOT</changelist>
   </properties>
 
