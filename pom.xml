@@ -58,7 +58,7 @@
     <maven-project-info-reports-plugin.version>3.9.0</maven-project-info-reports-plugin.version>
     <maven-jxr-plugin.version>3.6.0</maven-jxr-plugin.version>
     <cobertura-maven-plugin.version>2.7</cobertura-maven-plugin.version>
-    <pitest-maven.version>1.21.0</pitest-maven.version>
+    <pitest-maven.version>1.22.0</pitest-maven.version>
     <pitest-junit5-plugin.version>1.2.3</pitest-junit5-plugin.version>
     <versions-maven-plugin.version>2.19.1</versions-maven-plugin.version>
   </properties>
