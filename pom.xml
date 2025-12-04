@@ -60,7 +60,7 @@
     <cobertura-maven-plugin.version>2.7</cobertura-maven-plugin.version>
     <pitest-maven.version>1.21.0</pitest-maven.version>
     <pitest-junit5-plugin.version>1.2.3</pitest-junit5-plugin.version>
-    <versions-maven-plugin.version>2.19.1</versions-maven-plugin.version>
+    <versions-maven-plugin.version>2.20.1</versions-maven-plugin.version>
   </properties>
 
   <modules>
