@@ -36,6 +36,7 @@
   <rule ref="category/java/bestpractices.xml/JUnit4SuitesShouldUseSuiteAnnotation"/>
   <rule ref="category/java/bestpractices.xml/JUnit5TestShouldBePackagePrivate"/>
   <rule ref="category/java/bestpractices.xml/JUnitUseExpected"/>
+  <rule ref="category/java/bestpractices.xml/LabeledStatement"/>
   <rule ref="category/java/bestpractices.xml/LiteralsFirstInComparisons"/>
   <rule ref="category/java/bestpractices.xml/LooseCoupling"/>
   <rule ref="category/java/bestpractices.xml/MethodReturnsInternalArray"/>
@@ -64,6 +65,7 @@
   <rule ref="category/java/bestpractices.xml/UnnecessaryWarningSuppression"/>
   <rule ref="category/java/bestpractices.xml/UnusedAssignment"/>
   <rule ref="category/java/bestpractices.xml/UnusedFormalParameter"/>
+  <rule ref="category/java/bestpractices.xml/UnusedLabel"/>
   <rule ref="category/java/bestpractices.xml/UnusedLocalVariable"/>
   <rule ref="category/java/bestpractices.xml/UnusedPrivateField"/>
   <rule ref="category/java/bestpractices.xml/UnusedPrivateMethod"/>
@@ -178,7 +180,6 @@
   <rule ref="category/java/codestyle.xml/VariableCanBeInlined"/>
 
   <rule ref="category/java/design.xml/AbstractClassWithoutAnyMethod"/>
-  <rule ref="category/java/design.xml/AvoidCatchingGenericException"/>
   <rule ref="category/java/design.xml/AvoidDeeplyNestedIfStmts"/>
   <rule ref="category/java/design.xml/AvoidRethrowingException"/>
   <rule ref="category/java/design.xml/AvoidThrowingNewInstanceOfSameException"/>
@@ -253,8 +254,7 @@
   <rule ref="category/java/errorprone.xml/AvoidAssertAsIdentifier"/>
   <rule ref="category/java/errorprone.xml/AvoidBranchingStatementAsLastInLoop"/>
   <rule ref="category/java/errorprone.xml/AvoidCallingFinalize"/>
-  <rule ref="category/java/errorprone.xml/AvoidCatchingNPE"/>
-  <rule ref="category/java/errorprone.xml/AvoidCatchingThrowable"/>
+  <rule ref="category/java/errorprone.xml/AvoidCatchingGenericException"/>
   <rule ref="category/java/errorprone.xml/AvoidDecimalLiteralsInBigDecimalConstructor"/>
   <rule ref="category/java/errorprone.xml/AvoidDuplicateLiterals">
     <properties>
@@ -299,6 +299,7 @@
   <rule ref="category/java/errorprone.xml/FinalizeOverloaded"/>
   <rule ref="category/java/errorprone.xml/FinalizeShouldBeProtected"/>
   <rule ref="category/java/errorprone.xml/IdempotentOperations"/>
+  <rule ref="category/java/errorprone.xml/IdenticalConditionalBranches"/>
   <rule ref="category/java/errorprone.xml/ImplicitSwitchFallThrough"/>
   <rule ref="category/java/errorprone.xml/InstantiationToGetClass"/>
   <rule ref="category/java/errorprone.xml/InvalidLogMessageFormat"/>
