@@ -22,14 +22,14 @@ jobs:
     if: github.ref != 'refs/heads/main'
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Determine Java version
         uses: BetonQuest/java-version-export-github-action@main
         id: determine-java-version
         with:
           maven-expression: 'java.api.version'
       - name: Setup Java and Maven
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: ${{ steps.determine-java-version.outputs.java_major_version }}
@@ -45,7 +45,7 @@ jobs:
       release-version: ${{ steps.set-version.outputs.release-version }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
       - name: Determine Java version
@@ -54,7 +54,7 @@ jobs:
         with:
           maven-expression: 'java.api.version'
       - name: Setup Java and Maven
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: ${{ steps.determine-java-version.outputs.java_major_version }}
