@@ -28,11 +28,12 @@
   <rule ref="category/java/bestpractices.xml/ConstantsInInterface"/>
   <rule ref="category/java/bestpractices.xml/DefaultLabelNotLastInSwitch"/>
   <rule ref="category/java/bestpractices.xml/DoubleBraceInitialization"/>
-  <rule ref="category/java/bestpractices.xml/ExhaustiveSwitchHasDefault" />
+  <rule ref="category/java/bestpractices.xml/EnumComparison"/>
+  <rule ref="category/java/bestpractices.xml/ExhaustiveSwitchHasDefault"/>
   <rule ref="category/java/bestpractices.xml/ForLoopCanBeForeach"/>
   <rule ref="category/java/bestpractices.xml/ForLoopVariableCount"/>
   <!--<rule ref="category/java/bestpractices.xml/GuardLogStatement"/>-->
-  <rule ref="category/java/bestpractices.xml/ImplicitFunctionalInterface" />
+  <rule ref="category/java/bestpractices.xml/ImplicitFunctionalInterface"/>
   <rule ref="category/java/bestpractices.xml/JUnit4SuitesShouldUseSuiteAnnotation"/>
   <rule ref="category/java/bestpractices.xml/JUnit5TestShouldBePackagePrivate"/>
   <rule ref="category/java/bestpractices.xml/JUnitUseExpected"/>
@@ -258,7 +259,7 @@
   <rule ref="category/java/errorprone.xml/AvoidDecimalLiteralsInBigDecimalConstructor"/>
   <rule ref="category/java/errorprone.xml/AvoidDuplicateLiterals">
     <properties>
-      <property name="skipAnnotations" value="true" />
+      <property name="skipAnnotations" value="true"/>
       <property name="violationSuppressXPath" value="//ancestor::ClassDeclaration[matches(@SimpleName, '^.*(IT|Test|Fixture)$')]"/>
     </properties>
   </rule>
