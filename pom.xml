@@ -18,7 +18,7 @@
 
   <properties>
     <!-- project version -->
-    <revision>2.2.0</revision>
+    <revision>2.2.1</revision>
     <changelist>-SNAPSHOT</changelist>
     <!-- project properties -->
     <skipShade>false</skipShade>
@@ -344,10 +344,20 @@
             </goals>
             <configuration>
               <outputDirectory>${project.build.outputDirectory}</outputDirectory>
-              <resources>
+              <resources combine.children="append">
                 <resource>
                   <directory>src/main/resources</directory>
                   <filtering>true</filtering>
+                  <excludes>
+                    <exclude>**/*.bin</exclude>
+                  </excludes>
+                </resource>
+                <resource>
+                  <directory>src/main/resources</directory>
+                  <filtering>false</filtering>
+                  <includes>
+                    <include>**/*.bin</include>
+                  </includes>
                 </resource>
                 <resource>
                   <directory>.</directory>
