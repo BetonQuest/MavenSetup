@@ -54,7 +54,7 @@
   <distributionManagement>
     <repository>
       <id>betonquest</id>
-      <url>https://nexus.betonquest.org/repository/betonquest/</url>
+      <url>https://repo.betonquest.org/betonquest/</url>
     </repository>
     <site>
       <id>${project.artifactId}-site</id>
