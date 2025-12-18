@@ -18,7 +18,7 @@
 
   <properties>
     <!-- project version -->
-    <revision>2.3.0</revision>
+    <revision>2.3.1</revision>
     <changelist>-SNAPSHOT</changelist>
     <!-- project properties -->
     <skipShade>false</skipShade>
@@ -71,7 +71,7 @@
   <pluginRepositories>
     <pluginRepository>
       <id>betonquest</id>
-      <url>https://nexus.betonquest.org/repository/betonquest/</url>
+      <url>https://repo.betonquest.org/betonquest/</url>
     </pluginRepository>
   </pluginRepositories>
 
