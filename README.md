@@ -16,7 +16,7 @@ A basic setup for all maven projects containing building and tools for java.
         <repositories>
             <repository>
                 <id>betonquest-repo</id>
-                <url>https://nexus.betonquest.org/repository/betonquest/</url>
+                <url>https://repo.betonquest.org/betonquest/</url>
             </repository>
         </repositories> 
     </project>
