@@ -18,16 +18,16 @@
 
   <licenses>
     <license>
-      <name>GNU LESSER GENERAL PUBLIC LICENSE v2.1</name>
+      <name>GNU LESSER GENERAL PUBLIC LICENSE v3.0</name>
       <comments>This license belongs the project BetonQuest/MavenSetup and its maven artifacts parent, parent/versions and parent/configs</comments>
-      <url>https://www.gnu.org/licenses/lgpl-2.1-standalone.html</url>
+      <url>https://www.gnu.org/licenses/lgpl-3.0-standalone.html</url>
       <distribution>repo</distribution>
     </license>
   </licenses>
 
   <properties>
     <!-- project version -->
-    <revision>2.3.1</revision>
+    <revision>2.3.2</revision>
     <changelist>-SNAPSHOT</changelist>
     <!-- project settings -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
