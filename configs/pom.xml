@@ -16,7 +16,7 @@
 
   <properties>
     <!-- project version -->
-    <revision>2.4.0</revision>
+    <revision>2.4.1</revision>
     <changelist>-SNAPSHOT</changelist>
   </properties>
 
