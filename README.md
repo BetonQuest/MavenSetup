@@ -2,7 +2,7 @@
 
 A basic setup for all maven projects containing building and tools for java.
 
-## Howto setup
+## How to setup
 
 1. Add the following to your pom.xml:
     ````xml
