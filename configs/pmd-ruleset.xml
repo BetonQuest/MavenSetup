@@ -212,6 +212,7 @@
   <rule ref="category/java/design.xml/MutableStaticState"/>
   <rule ref="category/java/design.xml/NcssCount"/>
   <rule ref="category/java/design.xml/NPathComplexity"/>
+  <rule ref="category/java/design.xml/PublicMemberInNonPublicType" />
   <rule ref="category/java/design.xml/SignatureDeclareThrowsException"/>
   <rule ref="category/java/design.xml/SimplifiedTernary"/>
   <rule ref="category/java/design.xml/SimplifyBooleanExpressions"/>
@@ -290,7 +291,6 @@
   <rule ref="category/java/errorprone.xml/DoNotHardCodeSDCard"/>
   <rule ref="category/java/errorprone.xml/DoNotTerminateVM"/>
   <rule ref="category/java/errorprone.xml/DoNotThrowExceptionInFinally"/>
-  <rule ref="category/java/errorprone.xml/DontImportSun"/>
   <rule ref="category/java/errorprone.xml/DontUseFloatTypeForLoopIndices"/>
   <rule ref="category/java/errorprone.xml/EmptyCatchBlock"/>
   <rule ref="category/java/errorprone.xml/EmptyFinalizer"/>
@@ -337,6 +337,7 @@
   <rule ref="category/java/errorprone.xml/UnnecessaryBooleanAssertion"/>
   <rule ref="category/java/errorprone.xml/UnnecessaryCaseChange"/>
   <rule ref="category/java/errorprone.xml/UnnecessaryConversionTemporary"/>
+  <rule ref="category/java/errorprone.xml/UnsupportedJdkApiUsage" />
   <rule ref="category/java/errorprone.xml/UnusedNullCheckInEquals"/>
   <rule ref="category/java/errorprone.xml/UseCorrectExceptionLogging"/>
   <rule ref="category/java/errorprone.xml/UseEqualsToCompareStrings"/>

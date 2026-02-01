@@ -38,7 +38,7 @@ To update the versions of all dependencies that are on a release version, use th
 ```
 To update the versions of all dependencies that are on a snapshot version, use the following commands:
 ```shell
-./mvnw --projects :parent,:versions -DgenerateBackupPoms=false versions:unlock-snapshots versions:lock-snapshots
+./mvnw --projects :parent,:versions clean -DgenerateBackupPoms=false versions:unlock-snapshots versions:lock-snapshots
 ```
 
 ## Bump version
