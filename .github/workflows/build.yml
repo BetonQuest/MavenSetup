@@ -19,7 +19,7 @@ jobs:
   build_feature_branch:
     name: Build feature branch
     runs-on: ubuntu-latest
-    if: github.ref != 'refs/heads/main'
+    if: github.ref != 'refs/heads/main' || github.repository != 'BetonQuest/MavenSetup'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
@@ -40,7 +40,7 @@ jobs:
   build_main_branch:
     name: Build main branch
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && github.repository == 'BetonQuest/MavenSetup'
     outputs:
       release-version: ${{ steps.set-version.outputs.release-version }}
     steps:
