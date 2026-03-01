@@ -27,7 +27,7 @@
 
   <properties>
     <!-- project version -->
-    <revision>2.6.0</revision>
+    <revision>2.7.0</revision>
     <changelist>-SNAPSHOT</changelist>
     <!-- project settings -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -44,9 +44,9 @@
     <maven-site-plugin.version>4.0.0-M16</maven-site-plugin.version>
     <!-- additional plugin versions -->
     <maven-resources-plugin.version>3.4.0</maven-resources-plugin.version>
-    <maven-jar-plugin.version>3.4.2</maven-jar-plugin.version>
+    <maven-jar-plugin.version>3.5.0</maven-jar-plugin.version>
     <maven-compiler-plugin.version>3.14.1</maven-compiler-plugin.version>
-    <maven-surefire-plugin.version>3.5.4</maven-surefire-plugin.version>
+    <maven-surefire-plugin.version>3.5.5</maven-surefire-plugin.version>
     <flatten-maven-plugin.version>1.7.3</flatten-maven-plugin.version>
     <versions-maven-plugin.version>2.19.1</versions-maven-plugin.version>
   </properties>
