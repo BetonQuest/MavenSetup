@@ -33,7 +33,7 @@
     <excludedFailsafeGroups.default>${excludedFailsafeGroups}</excludedFailsafeGroups.default>
     <excludedPitestGroups.default>${excludedPitestGroups}</excludedPitestGroups.default>
     <!-- dependencyManagement versions -->
-    <jetbrains-annotations.version>26.0.2-1</jetbrains-annotations.version>
+    <jetbrains-annotations.version>26.1.0</jetbrains-annotations.version>
     <spotbugs-annotations.version>4.9.8</spotbugs-annotations.version>
     <junit.version>6.0.3</junit.version>
     <mockito.version>5.21.0</mockito.version>
