@@ -49,7 +49,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Determine Java version
-        uses: BetonQuest/java-version-export-github-action@main
+        uses: BetonQuest/java-version-export-github-action@7f2ea114b72fbf0945e72185581c1aea7d013d9b
         id: determine-java-version
         with:
           maven-expression: 'java.api.version'
