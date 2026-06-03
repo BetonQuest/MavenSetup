@@ -52,7 +52,7 @@
     <maven-checkstyle-plugin.checkstyle.version>12.3.1</maven-checkstyle-plugin.checkstyle.version>
     <maven-pmd-plugin.version>3.28.0</maven-pmd-plugin.version>
     <maven-pmd-plugin.pmd-core.version>7.25.0</maven-pmd-plugin.pmd-core.version>
-    <maven-pmd-plugin.pmd-java.version>7.24.0</maven-pmd-plugin.pmd-java.version>
+    <maven-pmd-plugin.pmd-java.version>7.25.0</maven-pmd-plugin.pmd-java.version>
     <spotbugs-maven-plugin.version>4.9.8.2</spotbugs-maven-plugin.version>
     <maven-surefire-report-plugin.version>3.5.6</maven-surefire-report-plugin.version>
     <maven-project-info-reports-plugin.version>3.9.0</maven-project-info-reports-plugin.version>
