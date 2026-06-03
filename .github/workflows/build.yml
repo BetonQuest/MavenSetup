@@ -15,6 +15,9 @@ on:
         description: The version of the new release built on the main branch.
         value: ${{ jobs.build_main_branch.outputs.release-version }}
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build_feature_branch:
     name: Build feature branch
