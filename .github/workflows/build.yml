@@ -22,7 +22,7 @@ jobs:
     if: github.ref != 'refs/heads/main' || github.repository != 'BetonQuest/MavenSetup'
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Determine Java version
         uses: BetonQuest/java-version-export-github-action@main
         id: determine-java-version
@@ -45,7 +45,7 @@ jobs:
       release-version: ${{ steps.set-version.outputs.release-version }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
       - name: Determine Java version
