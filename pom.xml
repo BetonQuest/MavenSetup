@@ -18,7 +18,7 @@
 
   <properties>
     <!-- project version -->
-    <revision>2.11.0</revision>
+    <revision>2.12.0</revision>
     <changelist>-SNAPSHOT</changelist>
     <!-- project properties -->
     <skipShade>false</skipShade>
@@ -34,13 +34,13 @@
     <excludedPitestGroups.default>${excludedPitestGroups}</excludedPitestGroups.default>
     <!-- dependencyManagement versions -->
     <jetbrains-annotations.version>26.1.0</jetbrains-annotations.version>
-    <spotbugs-annotations.version>4.9.8</spotbugs-annotations.version>
+    <spotbugs-annotations.version>4.10.3</spotbugs-annotations.version>
     <junit.version>6.1.1</junit.version>
     <mockito.version>5.23.0</mockito.version>
     <maven-wrapper.version>3.3.4</maven-wrapper.version>
     <!-- pluginManagement -->
     <maven-compiler-plugin.error-prone-core.version>2.50.0</maven-compiler-plugin.error-prone-core.version>
-    <maven-compiler-plugin.nullaway.version>0.13.4</maven-compiler-plugin.nullaway.version>
+    <maven-compiler-plugin.nullaway.version>0.13.8</maven-compiler-plugin.nullaway.version>
     <maven-enforcer-plugin.version>3.6.3</maven-enforcer-plugin.version>
     <maven-enforcer-plugin.required-maven-version.version>3.9.6</maven-enforcer-plugin.required-maven-version.version>
     <maven-failsafe-plugin.version>3.5.5</maven-failsafe-plugin.version>
