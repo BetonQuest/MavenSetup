@@ -44,7 +44,7 @@
     <maven-site-plugin.version>4.0.0-M16</maven-site-plugin.version>
     <!-- additional plugin versions -->
     <maven-resources-plugin.version>3.5.0</maven-resources-plugin.version>
-    <maven-jar-plugin.version>3.5.0</maven-jar-plugin.version>
+    <maven-jar-plugin.version>3.5.1</maven-jar-plugin.version>
     <maven-compiler-plugin.version>3.15.0</maven-compiler-plugin.version>
     <maven-surefire-plugin.version>3.5.6</maven-surefire-plugin.version>
     <flatten-maven-plugin.version>1.8.0</flatten-maven-plugin.version>
