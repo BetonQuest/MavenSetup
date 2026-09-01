@@ -34,7 +34,7 @@
     <excludedPitestGroups.default>${excludedPitestGroups}</excludedPitestGroups.default>
     <!-- dependencyManagement versions -->
     <jetbrains-annotations.version>26.1.0</jetbrains-annotations.version>
-    <spotbugs-annotations.version>4.10.3</spotbugs-annotations.version>
+    <spotbugs-annotations.version>4.10.4</spotbugs-annotations.version>
     <junit.version>6.1.1</junit.version>
     <mockito.version>5.23.0</mockito.version>
     <maven-wrapper.version>3.3.4</maven-wrapper.version>
