@@ -18,7 +18,7 @@
 
   <properties>
     <!-- project version -->
-    <revision>2.14.0</revision>
+    <revision>2.14.1</revision>
     <changelist>-SNAPSHOT</changelist>
     <!-- project properties -->
     <skipShade>false</skipShade>
@@ -394,6 +394,7 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <configuration>
           <parallel>all</parallel>
+          <useUnlimitedThreads>true</useUnlimitedThreads>
           <includes>
             <include>**/*Test.java</include>
           </includes>
