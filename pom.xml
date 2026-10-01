@@ -18,7 +18,7 @@
 
   <properties>
     <!-- project version -->
-    <revision>2.13.0</revision>
+    <revision>2.14.0</revision>
     <changelist>-SNAPSHOT</changelist>
     <!-- project properties -->
     <skipShade>false</skipShade>
@@ -40,7 +40,7 @@
     <maven-wrapper.version>3.3.4</maven-wrapper.version>
     <!-- pluginManagement -->
     <maven-compiler-plugin.error-prone-core.version>2.50.0</maven-compiler-plugin.error-prone-core.version>
-    <maven-compiler-plugin.nullaway.version>0.13.8</maven-compiler-plugin.nullaway.version>
+    <maven-compiler-plugin.nullaway.version>0.14.2</maven-compiler-plugin.nullaway.version>
     <maven-enforcer-plugin.version>3.6.3</maven-enforcer-plugin.version>
     <maven-enforcer-plugin.required-maven-version.version>3.9.6</maven-enforcer-plugin.required-maven-version.version>
     <maven-failsafe-plugin.version>3.5.6</maven-failsafe-plugin.version>
@@ -53,12 +53,12 @@
     <maven-pmd-plugin.version>3.28.0</maven-pmd-plugin.version>
     <maven-pmd-plugin.pmd-core.version>7.27.0</maven-pmd-plugin.pmd-core.version>
     <maven-pmd-plugin.pmd-java.version>7.27.0</maven-pmd-plugin.pmd-java.version>
-    <spotbugs-maven-plugin.version>4.10.2.0</spotbugs-maven-plugin.version>
+    <spotbugs-maven-plugin.version>4.10.4.1</spotbugs-maven-plugin.version>
     <maven-surefire-report-plugin.version>3.5.6</maven-surefire-report-plugin.version>
     <maven-project-info-reports-plugin.version>3.9.0</maven-project-info-reports-plugin.version>
     <maven-jxr-plugin.version>3.6.0</maven-jxr-plugin.version>
     <cobertura-maven-plugin.version>2.7</cobertura-maven-plugin.version>
-    <pitest-maven.version>1.25.5</pitest-maven.version>
+    <pitest-maven.version>1.30.0</pitest-maven.version>
     <pitest-junit5-plugin.version>1.2.3</pitest-junit5-plugin.version>
     <versions-maven-plugin.version>2.21.0</versions-maven-plugin.version>
   </properties>
