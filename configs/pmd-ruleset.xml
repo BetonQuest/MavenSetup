@@ -44,15 +44,21 @@
   <rule ref="category/java/bestpractices.xml/MethodReturnsInternalArray"/>
   <rule ref="category/java/bestpractices.xml/MissingOverride"/>
   <rule ref="category/java/bestpractices.xml/NonExhaustiveSwitch"/>
+  <rule ref="category/java/bestpractices.xml/OnDemandImport">
+    <properties>
+      <property name="allowStaticImportsFrom" value="org.mockito.ArgumentMatchers,org.junit.jupiter.api.Assertions,org.mockito.Mockito"/>
+    </properties>
+  </rule>
   <rule ref="category/java/bestpractices.xml/OneDeclarationPerLine"/>
   <rule ref="category/java/bestpractices.xml/PreserveStackTrace"/>
   <rule ref="category/java/bestpractices.xml/PrimitiveWrapperInstantiation"/>
   <rule ref="category/java/bestpractices.xml/RelianceOnDefaultCharset"/>
   <rule ref="category/java/bestpractices.xml/ReplaceEnumerationWithIterator"/>
   <rule ref="category/java/bestpractices.xml/ReplaceHashtableWithMap"/>
-  <!--<rule ref="category/java/bestpractices.xml/ReplaceVectorWithList"/>-->
+  <!-- <rule ref="category/java/bestpractices.xml/ReplaceJavaUtilVector"/> -->
   <rule ref="category/java/bestpractices.xml/SimplifiableTestAssertion"/>
   <rule ref="category/java/bestpractices.xml/SystemPrintln"/>
+  <rule ref="category/java/bestpractices.xml/TypeNameMismatch"/>
   <rule ref="category/java/bestpractices.xml/UnitTestAssertionsShouldIncludeMessage"/>
   <rule ref="category/java/bestpractices.xml/UnitTestContainsTooManyAsserts">
     <properties>
@@ -119,6 +125,7 @@
     </properties>
   </rule>
   <rule ref="category/java/codestyle.xml/ControlStatementBraces"/>
+  <rule ref="category/java/codestyle.xml/CStyleArrayDeclaration"/>
   <rule ref="category/java/codestyle.xml/EmptyControlStatement"/>
   <rule ref="category/java/codestyle.xml/EmptyMethodInAbstractClassShouldBeAbstract"/>
   <rule ref="category/java/codestyle.xml/ExtendsObject"/>
@@ -137,6 +144,7 @@
   <rule ref="category/java/codestyle.xml/LocalHomeNamingConvention"/>
   <rule ref="category/java/codestyle.xml/LocalInterfaceSessionNamingConvention"/>
   <rule ref="category/java/codestyle.xml/LocalVariableCouldBeFinal"/>
+  <!--<rule ref="category/java/codestyle.xml/LocalVariableDeclarationShouldBeAtStartOfBlock"/>-->
   <rule ref="category/java/codestyle.xml/LocalVariableNamingConventions"/>
   <!--<rule ref="category/java/codestyle.xml/LongVariable"/>-->
   <rule ref="category/java/codestyle.xml/MDBAndSessionBeanNamingConvention"/>
@@ -204,6 +212,7 @@
   <rule ref="category/java/design.xml/GodClass"/>
   <rule ref="category/java/design.xml/ImmutableField"/>
   <rule ref="category/java/design.xml/InstantiableUtilityClass"/>
+  <rule ref="category/java/design.xml/InternalApiUsage"/>
   <rule ref="category/java/design.xml/InvalidJavaBean"/>
   <rule ref="category/java/design.xml/LawOfDemeter">
     <properties>
@@ -310,6 +319,7 @@
   <rule ref="category/java/errorprone.xml/JUnitJupiterTestNoPrivateModifier"/>
   <rule ref="category/java/errorprone.xml/JUnitSpelling"/>
   <rule ref="category/java/errorprone.xml/JUnitStaticSuite"/>
+  <rule ref="category/java/errorprone.xml/LongLiteralEndingWithLowercaseL"/>
   <rule ref="category/java/errorprone.xml/MethodWithSameNameAsEnclosingClass"/>
   <rule ref="category/java/errorprone.xml/MisplacedNullCheck"/>
   <rule ref="category/java/errorprone.xml/MissingSerialVersionUID"/>
@@ -379,7 +389,6 @@
   <rule ref="category/java/performance.xml/StringInstantiation"/>
   <rule ref="category/java/performance.xml/StringToString"/>
   <rule ref="category/java/performance.xml/TooFewBranchesForSwitch"/>
-  <rule ref="category/java/performance.xml/UseArrayListInsteadOfVector"/>
   <rule ref="category/java/performance.xml/UseArraysAsList"/>
   <rule ref="category/java/performance.xml/UseIndexOfChar"/>
   <rule ref="category/java/performance.xml/UseIOStreamsWithApacheCommonsFileItem"/>
